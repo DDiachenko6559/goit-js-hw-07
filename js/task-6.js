@@ -29,15 +29,14 @@ function createBoxes(amount) {
   }
 }
 
-// Функція для очищення коробок
+// Функція для очищення div-ів
 function destroyBoxes() {
-  // Очищаємо контейнер
   boxesContainer.innerHTML = '';
 }
 
 // Отримуємо посилання на кнопки
-const createBtn = document.querySelector('[data-create]');
-const destroyBtn = document.querySelector('[data-destroy]');
+const createBtn = document.querySelector('button[data-create]');
+const destroyBtn = document.querySelector('button[data-destroy]');
 const input = document.querySelector('input[type="number"]');
 
 // Додаємо обробник події для кнопки "Create"
@@ -52,9 +51,6 @@ createBtn.addEventListener('click', () => {
 
     // Очищаємо значення інпута
     input.value = '';
-  } else {
-    // Повідомляємо користувача про помилку
-    alert('Please enter a number between 1 and 100.');
   }
 });
 
