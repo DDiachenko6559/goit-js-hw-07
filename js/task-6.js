@@ -11,12 +11,9 @@ function createBoxes(amount) {
 
   let size = 30;
 
-  // Створюємо пустий масив та задаємо йому довжину
-  let array = [];
-  array.length = amount;
+  const container = document.createElement('div'); // Створюємо контейнер для додавання нових div-ів
 
-  // Створюємо коробки
-  for (let number of array) {
+  for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
 
     box.style.width = `${size}px`;
