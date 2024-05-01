@@ -11,8 +11,6 @@ function createBoxes(amount) {
 
   let size = 30;
 
-  const container = document.createElement('div'); // Створюємо контейнер для додавання нових div-ів
-
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
 
