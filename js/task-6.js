@@ -11,6 +11,8 @@ function createBoxes(amount) {
 
   let size = 30;
 
+  const fragment = document.createDocumentFragment(); // Створюємо документ-фрагмент
+
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
 
@@ -18,11 +20,13 @@ function createBoxes(amount) {
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
 
-    // Додаємо div до контейнера
-    boxesContainer.append(box);
-    size += 10; // Розміри кожного наступного елемента
+    fragment.appendChild(box); // Додаємо div до документ-фрагменту
+    size += 10;
   }
+
+  boxesContainer.appen(fragment); // Додаємо усі елементи разом до контейнера
 }
+
 
 // Функція для очищення div-ів
 function destroyBoxes() {
