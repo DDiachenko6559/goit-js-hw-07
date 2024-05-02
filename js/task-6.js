@@ -20,11 +20,11 @@ function createBoxes(amount) {
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
 
-    fragment.appendChild(box); // Додаємо div до документ-фрагменту
+    fragment.append(box); // Додаємо div до документ-фрагменту
     size += 10;
   }
 
-  boxesContainer.appen(fragment); // Додаємо усі елементи разом до контейнера
+  boxesContainer.append(fragment); // Додаємо усі елементи разом до контейнера
 }
 
 
